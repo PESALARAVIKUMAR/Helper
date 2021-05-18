@@ -1,0 +1,45 @@
+Trees: 
+	1. Non-linear data structure because it does not store in a sequential manner
+	2. Collection of objects or entities known as nodes that are linked together to represent or simulate hierarchy.
+Properties:
+	1. Recursive data structure (Recursion means reducing something in a self-similar manner)
+	2. Number of edges: If there are n nodes, then there would n-1 edges
+	3. Depth of node x: The depth of node x can be defined as the length of the path from the root to the node x
+	4. Height of node x: The height of node x can be defined as the longest path from the node x to the leaf node
+Tree Applications:
+	1. Storing naturally hierarchical data
+	2. Organize data: It is used to organize data for efficient insertion, deletion and searching. 
+		For example, a binary tree has a logN time for searching an element.
+	3. Trie: It is a special kind of tree that is used to store the dictionary. 
+		It is a fast and efficient way for dynamic spell checking.
+	4. Heap: It is also a tree data structure implemented using arrays. It is used to implement priority queues
+--------------------------------------------------
+Binary Tree: (Node can have maximum two children)
+	1. At each level of i, the maximum number of nodes is 2^i.
+	2. The minimum number of nodes possible at height h is equal to h+1.
+Types:
+	1. Full/ proper/ strict Binary tree - node must contain either 0 or 2 children
+	2. Complete Binary tree - nodes are completely filled except the last level
+	3. Perfect Binary tree - all the internal nodes have 2 children, and leaf nodes are at the same level
+	4. Degenerate Binary tree - all the internal nodes have only one children
+	5. Balanced Binary tree - both the left and right trees differ by atmost 1
+--------------------------------------------------
+Binary Search Tree: (ordered binary tree - nodes are arranged in a specific order)
+	1. Searching become very efficient
+	2. Efficient data structure in compare to arrays and linked lists
+	3. Speed up the insertion and deletion operations
+--------------------------------------------------
+AVL Tree: [height(leftTree) - height(rightTree)] = (-1, 0, +1)
+(height balanced binary search tree in which each node is associated with a balance factor)
+	1. Controls the height of the binary search tree by not letting it to be skewed
+	2. Space = O(N), Search, Insert, Delete = O(logN)
+Rotations:
+	RR, LL, RL, LR
+--------------------------------------------------
+B Tree: (m-way tree that can be widely used for disk access)
+	1. Order m can have at most m-1 keys and m children
+	2. Keys and records both can be stored in the internal as well as leaf nodes
+B+ Tree: (extension of B Tree which allows efficient insertion, deletion and search operations)
+	1. records (data) can only be stored on the leaf nodes while internal nodes can only store the key values
+	2. Store the large amount of data which can not be stored in the main memory
+

@@ -1,0 +1,46 @@
+Graphs:
+	1. group of vertices and edges that are used to connect these vertices
+	2. Cyclic tree, where vertices(Nodes) maintain any complex relationship, instead of having parent child relationship
+Terminology:
+	Path - sequence of nodes that are followed in order to reach some terminal node V from the initial node U
+	Closed Path - if the initial node is same as terminal node. A path will be closed path if V0=VN
+	Simple Path - If all the nodes of the graph are distinct with an exception V0=VN
+	Cycle - path which has no repeated edges or vertices except the first and last vertices
+	Connected Graph - some path exists between every two vertices (u, v) in V
+	Complete Graph - every node is connected with all other nodes { n(n-1)/2 - edges }
+	Digraph - directed graph with some direction and the traversing can be done only in the specified direction
+	Degree of the Node - number of edges that are connected with that node. A node with degree 0 is called as isolated node.
+--------------------------------------------------
+Graphical Representations: (Technique used to store some graph into the computer's memory)
+1. Sequential Representation  (n x n)
+	Adjacency matrix to store the mapping represented by vertices and edges
+2. Linked Representation
+	Adjacency list is used to store the Graph into the computer's memory
+--------------------------------------------------
+Graph Traversal Algorithm:
+1. Breadth First Search
+	Starts traversing the graph from root node and explores all the neighbouring nodes
+	Then, it selects the nearest node and explore all the unexplored nodes
+	Same process for each of the nearest node until it finds the goal
+Applications:
+	1. Shortest Path and Minimum Spanning Tree for unweighted graph
+	2. Peer to Peer Networks. In Peer to Peer Networks like BitTorrent, Breadth First Search is used to find all neighbor nodes
+	3. Crawlers in Search Engines: Crawlers build index using Breadth First.
+		The idea is to start from source page and follow all links from source and keep doing same
+		Depth First Traversal can also be used for crawlers, but the advantage with Breadth First Traversal is,
+			depth or levels of the built tree can be limited
+	4. GPS Navigation systems: Breadth First Search is used to find all neighboring locations.
+	
+2. Depth First Search
+	Starts with the initial node of the graph G
+	Then goes to deeper and deeper 
+	Until we find the goal node or the node which has no children
+Applications:
+	1. For a weighted graph, DFS traversal of the graph produces the minimum spanning tree and all pair shortest path tree.
+	2. Detecting cycle in a graph, A graph has cycle if and only if we see a back edge during DFS
+	3. Solving puzzles with only one solution, such as mazes
+	
+--------------------------------------------------
+Spanning Tree:
+	Tree (not contain any cycle) that can be created from the given graph G would have the same number of vertices
+	but the number of edges in the spanning tree would be equal to the number of vertices in the graph minus 1
